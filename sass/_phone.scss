@@ -1,0 +1,200 @@
+.phone-container {
+    // align to the left
+    display: flex;
+    
+    justify-content: end;
+}
+
+.phone {
+    width: 35rem;
+    background-color: white;
+    padding: 1rem;
+    height: fit-content;
+    border-radius: 3rem;
+    box-shadow: .5rem .5rem 2rem rgba(0,0,0,.2);
+    margin-right: 10rem;
+
+    @media only screen and (max-width: $bp-small){
+        margin-right: 0;
+    }
+}
+
+.chat-app {
+    background-color: $light-grayish-violet;
+    padding-bottom: 1rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+
+    &__header {
+        background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+        height: 8rem;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        color: white;
+
+        display: flex;
+        padding: 1rem;
+        padding-top: 3rem;
+        align-items: center;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 50%;
+            height: 3rem;
+            border-radius: 5rem;
+            background-color: white;
+            position: absolute;
+            top: -1rem;
+            left: 7.5rem;
+        }
+    }
+
+    &__back-icon {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+
+    &__avatar {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 100%;
+        margin-right: 1rem;
+    }
+
+    &__username {
+        font-size: 1.6rem;
+    }
+
+    &__user-status {
+        font-size: 1.2rem;
+        color: hsl(206, 6%, 79%);
+    }
+
+    &__options {
+        margin-left: auto;
+        font-size: 2rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &::before, &::after {
+            content: ".";
+            display: inline-block;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+        }
+
+        &::before {
+            top: .5rem;
+            left: 0;
+        }
+
+        &::after {
+            top: -.5rem;
+            left: 0;
+        }
+    }
+
+    &__body {
+        padding: 1rem; 
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__chat {
+        max-width: 65%;
+        font-size: 1.4rem;
+        padding: 1rem;
+        border-radius: 1.5rem;
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &--user-chat {
+            background-color: hsl(210, 8%, 90%);
+            color: $moderate-violet;
+        }
+
+        &--your-chat {
+            align-self: flex-end;
+            background-color: white;
+            color: $desaturated-dark-violet;
+        }
+
+        &--image-roll {
+            display: flex;
+            justify-content: space-around;
+
+            & > img {
+                width: 5rem;
+                height: 5rem;
+                border-radius: .5rem;
+            }
+        }
+
+    }
+
+    &__new-chat {
+        background-color: white;
+        height: 4.5rem;
+        border-radius: 2rem;
+        width: 90%;
+        margin: 0 auto; 
+        margin-top: 1.5rem;
+
+        display: flex;
+        align-items: center;
+        padding-right: 1rem;
+        padding-left: 3rem;
+
+        &--message {
+            font-size: 1.4rem;
+            color: $grayish-blue;
+            margin-right: auto;
+        }
+
+        &--send-button {
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 100%;
+            text-align: center;
+            background-color: $very-dark-desaturated-violet;
+            color: white;
+            font-size: 2rem;
+            padding-top: .4rem;
+        }
+    }
+}
+
+.pricings {
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%) ,  hsl(264, 100%, 61%));
+    height: 4rem;
+    max-width: 75%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    &__radio {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        border: 1px solid $very-light-magenta;
+    }
+
+    &__description {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+
+    &__price {
+        font-size: 1.8rem;
+    }
+}

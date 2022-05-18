@@ -1,0 +1,29 @@
+.about-container {
+
+    @media only screen and (max-width: $bp-small){
+        text-align: center;
+        margin-top: 10rem;
+    }
+}
+
+.header {
+    margin-bottom: 2rem;
+    color: $very-dark-desaturated-violet;
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.text {
+    color: $dark-grayish-violet;
+    max-width: 53rem;
+    font-size: 2rem;
+    line-height: 1.5;
+
+    @media only screen and (max-width: $bp-small){
+        max-width: 40rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        width: 50rem;
+    }
+}
